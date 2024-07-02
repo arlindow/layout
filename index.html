@@ -8,37 +8,156 @@
 </head>
 <body>
     <header>
-        <h1>Header - Cabeçalho</h1>
+        <img src="imagens/logoDesafioDoCodigo.jpeg" alt="Descrição da imagem">
+        <h1>Desafio do Código</h1>
     </header>
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Sobre</a></li>
-            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Conteúdos</a></li>
             <li><a href="#">Contato</a></li>
         </ul>
     </nav>
     <aside>
-        <h2>Aside - Relacionado com o conteúdo principal</h2>
-        <p>Informações adicionais ou anúncios.</p>
+        <h2>Bem-vindo ao Desafio do Código!</h2> 
+        <h3>Aqui você encontrará conteúdos de programação, algoritmos resolvidos e muito mais.</h3>
+        <p></p>
     </aside>
     <main>
         <section>
-            <h2>Seção Principal</h2>
-            <p>Conteúdo principal aqui.</p>
+            <h2>Algoritmos</h2>
+            <p>Explore nossos conteúdos de programação e algoritmos resolvidos para aprimorar suas habilidades.</p>
         </section>
         <article>
-            <h3>Artigo Relacionado</h3>
-            <p>Conteúdo relacionado ao principal.</p>
+            <img src="imagens/python.png" alt="python">
+            <h4>Desafio 1</h4>
+            <h3>Potência de 2.</h3>
+            <p>Criar um programa em Python que determine se um número fornecido pelo usuário é uma potência de 2. 
+            O programa também deve informar o expoente ao qual 2 deve ser elevado para obter o número fornecido, caso ele seja uma potência de 2.
+            </p>
+
+            <button onclick="toggleSolucao(this)">Ver Solução</button>
+            <div class="solucao">
+                <p>def potenciaDe2(num):
+                    """
+                    Verifica se um número é uma potência de 2 e retorna 
+                    o expoente.
+                
+                    Parâmetros:
+                    num (int): O número a ser verificado.
+                
+                    Retorna:
+                    tuple: Uma tupla contendo um booleano indicando se o 
+                    número é uma potência de 2
+                    e o expoente se for uma potência de 2, None caso 
+                    contrário.
+                    """
+                    expoente = 0
+                    temp = num
+                
+                    while temp > 1 and temp % 2 == 0:
+                        temp /= 2
+                        expoente += 1
+                
+                    if temp == 1:
+                        return (True, expoente)
+                    else:
+                        return (False, None)
+                
+                def main():
+                    """
+                    Função principal para verificar se um número é uma 
+                    potência de 2 e exibir informações.
+                    """
+                    num = int(input("Digite um número inteiro: "))
+                
+                    is_power, expoente = potenciaDe2(num)
+                
+                    if is_power:
+                        print(f"{num} é uma potência de 2. Expoente: 
+                        {expoente}")
+                    else:
+                        print(f"{num} não é uma potência de 2.")
+                
+                if __name__ == "__main__":
+                    main()
+                </p>
+            </div>
+
         </article>
         <article>
-            <h3>Artigo Relacionado</h3>
-            <p>Conteúdo relacionado ao principal.</p>
+            <img src="imagens/python.png" alt="python">
+            <h4>Desafio 2</h4>
+            <h3>Verificar se um numero é primo.</h3>
+            <p> Verificar se um numero é primo. Um número primo é um número natural 
+                maior que 1 que só pode ser dividido por 1 e por ele mesmo, sem deixar 
+                resto. Em outras palavras, um número primo tem exatamente dois divisores 
+                positivos distintos: 1 e ele próprio.
+            </p>
+
+            <button onclick="toggleSolucao(this)">Ver Solução</button>
+            <div class="solucao">
+                <p>def eh_primo(numero):
+                    # Função que verifica se um número é primo.
+                    
+                    if numero <= 1:
+                        # Se o número for menor ou igual a 1, retorna False, pois 0 e 1 não são números primos.
+                        return False
+                
+                    # Itera de 2 até a raiz quadrada do número (inclusive).
+                    # Se um número não tem divisores além de 1 e ele mesmo até a sua raiz quadrada,
+                    # então ele não terá divisores maiores do que a sua raiz quadrada.
+                    for i in range(2, int(numero ** 0.5) + 1):
+                        if numero % i == 0:
+                            # Se o número for divisível por qualquer i no intervalo, retorna False.
+                            return False
+                    
+                    # Se nenhum divisor foi encontrado, retorna True, indicando que o número é primo.
+                    return True
+                
+                def main():
+                    # Função principal que solicita um número do usuário e verifica se ele é primo.
+                    
+                    numero = int(input("Digite um número inteiro positivo: "))
+                    # Converte a entrada do usuário para um número inteiro.
+                
+                    if eh_primo(numero):
+                        # Chama a função eh_primo para verificar se o número é primo.
+                        # Se a função retornar True, imprime que o número é primo.
+                        print(f"{numero} é primo.")
+                    else:
+                        # Se a função retornar False, imprime que o número não é primo.
+                        print(f"{numero} não é primo.")
+                
+                # Verifica se o script está sendo executado diretamente (não importado como um módulo).
+                if __name__ == "__main__":
+                    main()
+                    # Chama a função principal.
+                </p>
+            </div>
+
         </article>
+        
+        
     </main>
+
     
     <footer>
-        <p>Footer - Rodapé</p>
+        
+        <div class="container">
+            <h2>Desafio do Código</h2>
+            <h3>Contato</h3>
+            <p>Siga-nos nas redes sociais:</p>
+            <div class="social-icons">
+                <a href="https://wa.me/5587981098703" target="_blank"><img src="./imagens/zap.png" alt="whatzapp"></a>
+                <a href="https://instagram.com/desafio_do_codigo" target="_blank"><img src="./imagens/instagram.png" alt="Instagram"></a>
+                <a href="https://linkedin.com/in/arlindo-wilson-" target="_blank"><img src="./imagens/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>

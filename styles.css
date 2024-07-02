@@ -19,8 +19,13 @@ header {
     text-align: center;
 }
 
+img {
+    max-width: 100px; /* Ajuste conforme necessário */
+    height: auto;
+}
+
 nav {
-    background: #444;
+    background: rgb(15, 101, 172);/*#444444 cinza*/
     color: white;
 }
 
@@ -44,17 +49,75 @@ main {
 }
 
 main section {
-    flex: 3;
-    background: #f4f4f4;
+    flex: 1.5;
+    background:rgb(15, 101, 172) ;/*#f4f4f4*/
     padding: 1rem;
     border-radius: 5px;
+    color: white;
 }
 
+section{
+    width: 100%;
+}
+
+main section h2{
+    text-align: center;
+    overflow-x: auto; /* Barra de rolagem vertical */
+}
+
+
 main article {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;    
+
     flex: 1;
     background: #e4e4e4;
     padding: 1rem;
     border-radius: 5px;
+}
+
+main article img{
+    width: 50px;
+    height: 50px;
+    
+    margin-bottom: 1rem;
+
+}
+
+.solucao {
+    display: none;
+    margin-top: 1rem;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 5px;
+
+}
+
+.solucao.visible {
+    display: block;
+}
+
+.solucao p {
+    white-space: pre-wrap; /* Mantém a formatação do código */
+}
+
+
+button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #0f65ac;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0a4a82;
 }
 
 aside {
@@ -62,6 +125,7 @@ aside {
     padding: 1rem;
     margin: 1rem 0;
     border-radius: 5px;
+    text-align: center;
 }
 
 footer {
@@ -70,4 +134,25 @@ footer {
     text-align: center;
     padding: 1rem;
     margin-top: auto;
+    
 }
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons a {
+    display: flex;
+    margin: 0 10px;
+}
+
+.social-icons img {
+    display: flex;
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
