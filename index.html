@@ -24,7 +24,8 @@
         <h3>Aqui você encontrará conteúdos de programação, algoritmos resolvidos e muito mais.</h3>
         <p></p>
     </aside>
-    <main>
+
+    <main class="projetos">
         <section>
             <h2>Algoritmos</h2>
             <p>Explore nossos conteúdos de programação e algoritmos resolvidos para aprimorar suas habilidades.</p>
@@ -40,8 +41,9 @@
             <button onclick="toggleSolucao(this)">Ver Solução</button>
             <div class="solucao">
                 <p>def potenciaDe2(num):
-                    """
-                    Verifica se um número é uma potência de 2 e retorna 
+
+                """
+                Verifica se um número é uma potência de 2 e retorna 
                     o expoente.
                 
                     Parâmetros:
@@ -142,6 +144,195 @@
         
     </main>
 
+    <aside>
+        <h2>Projetos</h2>
+    </aside>
+
+    <main class="projetos">
+        <section>
+            <h2>CRUD</h2>
+            <p>Guia Completo de Instalação e Desenvolvimento de um Sistema CRUD com Node.js, MySQL e Express.</p>
+        </section>
+        <article>
+            <img src="imagens/node.jpg" alt="python">
+            <h3>CRUD com NodeJS</h3>
+            <h4>Instalação do Node.js</h4>
+            <p></p>
+
+            <button onclick="toggleSolucao(this)">Ver Solução</button>
+            <div class="solucao">
+                <p>1. Instalação do Node.js
+
+                Para instalar o Node.js, acesse o [site oficial]
+                (https://nodejs.org/pt-br/download) e baixe a 
+                versão apropriada para o seu sistema operacional.
+
+                </p>
+            </div>
+
+        </article>
+
+        <article>
+            <img src="imagens/python.png" alt="python">
+            <h4>Desafio 2</h4>
+            <h3>Verificar se um numero é primo.</h3>
+            <p> Verificar se um numero é primo. Um número primo é um número natural 
+                maior que 1 que só pode ser dividido por 1 e por ele mesmo, sem deixar 
+                resto. Em outras palavras, um número primo tem exatamente dois divisores 
+                positivos distintos: 1 e ele próprio.
+            </p>
+
+            <button onclick="toggleSolucao(this)">Ver Solução</button>
+            <div class="solucao">
+                <p>def eh_primo(numero):
+                    # Função que verifica se um número é primo.
+                    
+                    if numero <= 1:
+                        # Se o número for menor ou igual a 1, retorna False, pois 0 e 1 não são números primos.
+                        return False
+                
+                    # Itera de 2 até a raiz quadrada do número (inclusive).
+                    # Se um número não tem divisores além de 1 e ele mesmo até a sua raiz quadrada,
+                    # então ele não terá divisores maiores do que a sua raiz quadrada.
+                    for i in range(2, int(numero ** 0.5) + 1):
+                        if numero % i == 0:
+                            # Se o número for divisível por qualquer i no intervalo, retorna False.
+                            return False
+                    
+                    # Se nenhum divisor foi encontrado, retorna True, indicando que o número é primo.
+                    return True
+                
+                def main():
+                    # Função principal que solicita um número do usuário e verifica se ele é primo.
+                    
+                    numero = int(input("Digite um número inteiro positivo: "))
+                    # Converte a entrada do usuário para um número inteiro.
+                
+                    if eh_primo(numero):
+                        # Chama a função eh_primo para verificar se o número é primo.
+                        # Se a função retornar True, imprime que o número é primo.
+                        print(f"{numero} é primo.")
+                    else:
+                        # Se a função retornar False, imprime que o número não é primo.
+                        print(f"{numero} não é primo.")
+                
+                # Verifica se o script está sendo executado diretamente (não importado como um módulo).
+                if __name__ == "__main__":
+                    main()
+                    # Chama a função principal.
+                </p>
+            </div>
+
+        </article>
+
+        <article>
+            <img src="imagens/python.png" alt="python">
+            <h4>Desafio 2</h4>
+            <h3>Verificar se um numero é primo.</h3>
+            <p> Verificar se um numero é primo. Um número primo é um número natural 
+                maior que 1 que só pode ser dividido por 1 e por ele mesmo, sem deixar 
+                resto. Em outras palavras, um número primo tem exatamente dois divisores 
+                positivos distintos: 1 e ele próprio.
+            </p>
+
+            <button onclick="toggleSolucao(this)">Ver Solução</button>
+            <div class="solucao">
+                <p>def eh_primo(numero):
+                    # Função que verifica se um número é primo.
+                    
+                    if numero <= 1:
+                        # Se o número for menor ou igual a 1, retorna False, pois 0 e 1 não são números primos.
+                        return False
+                
+                    # Itera de 2 até a raiz quadrada do número (inclusive).
+                    # Se um número não tem divisores além de 1 e ele mesmo até a sua raiz quadrada,
+                    # então ele não terá divisores maiores do que a sua raiz quadrada.
+                    for i in range(2, int(numero ** 0.5) + 1):
+                        if numero % i == 0:
+                            # Se o número for divisível por qualquer i no intervalo, retorna False.
+                            return False
+                    
+                    # Se nenhum divisor foi encontrado, retorna True, indicando que o número é primo.
+                    return True
+                
+                def main():
+                    # Função principal que solicita um número do usuário e verifica se ele é primo.
+                    
+                    numero = int(input("Digite um número inteiro positivo: "))
+                    # Converte a entrada do usuário para um número inteiro.
+                
+                    if eh_primo(numero):
+                        # Chama a função eh_primo para verificar se o número é primo.
+                        # Se a função retornar True, imprime que o número é primo.
+                        print(f"{numero} é primo.")
+                    else:
+                        # Se a função retornar False, imprime que o número não é primo.
+                        print(f"{numero} não é primo.")
+                
+                # Verifica se o script está sendo executado diretamente (não importado como um módulo).
+                if __name__ == "__main__":
+                    main()
+                    # Chama a função principal.
+                </p>
+            </div>
+
+        </article>
+
+        <article>
+            <img src="imagens/python.png" alt="python">
+            <h4>Desafio 2</h4>
+            <h3>Verificar se um numero é primo.</h3>
+            <p> Verificar se um numero é primo. Um número primo é um número natural 
+                maior que 1 que só pode ser dividido por 1 e por ele mesmo, sem deixar 
+                resto. Em outras palavras, um número primo tem exatamente dois divisores 
+                positivos distintos: 1 e ele próprio.
+            </p>
+
+            <button onclick="toggleSolucao(this)">Ver Solução</button>
+            <div class="solucao">
+                <p>def eh_primo(numero):
+                    # Função que verifica se um número é primo.
+                    
+                    if numero <= 1:
+                        # Se o número for menor ou igual a 1, retorna False, pois 0 e 1 não são números primos.
+                        return False
+                
+                    # Itera de 2 até a raiz quadrada do número (inclusive).
+                    # Se um número não tem divisores além de 1 e ele mesmo até a sua raiz quadrada,
+                    # então ele não terá divisores maiores do que a sua raiz quadrada.
+                    for i in range(2, int(numero ** 0.5) + 1):
+                        if numero % i == 0:
+                            # Se o número for divisível por qualquer i no intervalo, retorna False.
+                            return False
+                    
+                    # Se nenhum divisor foi encontrado, retorna True, indicando que o número é primo.
+                    return True
+                
+                def main():
+                    # Função principal que solicita um número do usuário e verifica se ele é primo.
+                    
+                    numero = int(input("Digite um número inteiro positivo: "))
+                    # Converte a entrada do usuário para um número inteiro.
+                
+                    if eh_primo(numero):
+                        # Chama a função eh_primo para verificar se o número é primo.
+                        # Se a função retornar True, imprime que o número é primo.
+                        print(f"{numero} é primo.")
+                    else:
+                        # Se a função retornar False, imprime que o número não é primo.
+                        print(f"{numero} não é primo.")
+                
+                # Verifica se o script está sendo executado diretamente (não importado como um módulo).
+                if __name__ == "__main__":
+                    main()
+                    # Chama a função principal.
+                </p>
+            </div>
+
+        </article>
+        
+    </main>
+    
     
     <footer>
         

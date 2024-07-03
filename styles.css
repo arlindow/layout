@@ -46,46 +46,39 @@ main {
     flex: 1;
     padding: 1rem;
     gap: 1rem;
+    background:rgb(13, 14, 15);
+    flex-wrap: wrap;
 }
 
 main section {
     flex: 1.5;
-    background:rgb(15, 101, 172) ;/*#f4f4f4*/
+    background:rgb(15, 101, 172);
     padding: 1rem;
     border-radius: 5px;
     color: white;
 }
 
-section{
-    width: 100%;
-}
-
-main section h2{
+main section h2 {
     text-align: center;
-    overflow-x: auto; /* Barra de rolagem vertical */
+    overflow-x: auto; /* Barra de rolagem horizontal */
 }
-
 
 main article {
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;    
-
+    text-align: center;
     flex: 1;
     background: #e4e4e4;
     padding: 1rem;
     border-radius: 5px;
 }
 
-main article img{
+main article img {
     width: 50px;
     height: 50px;
-    
     margin-bottom: 1rem;
-
 }
 
 .solucao {
@@ -94,7 +87,6 @@ main article img{
     background-color: #f4f4f4;
     padding: 1rem;
     border-radius: 5px;
-
 }
 
 .solucao.visible {
@@ -104,7 +96,6 @@ main article img{
 .solucao p {
     white-space: pre-wrap; /* Mantém a formatação do código */
 }
-
 
 button {
     margin-top: 1rem;
@@ -134,7 +125,6 @@ footer {
     text-align: center;
     padding: 1rem;
     margin-top: auto;
-    
 }
 
 .social-icons {
@@ -153,6 +143,101 @@ footer {
     height: 30px;
 }
 
+main.projetos {
+    display: flex;
+    flex: 2;
+    background: rgb(13, 14, 15);
+    flex-wrap: nowrap; /* Não quebra linha */
+    width: 100%; /* Ocupa 100% da largura da tela */
+    height: 100vh; /* Ocupa 100% da altura da tela */
+    overflow-x: auto; /* Habilita a barra de rolagem horizontal */
+    overflow-y: hidden; /* Evita barra de rolagem vertical */
+    box-sizing: border-box;
+    padding: 20px;
+}
 
+main.projetos > * {
+    flex: 0 0 auto;
+    width: 400px; /* Largura fixa para cada artigo */
+    margin-right: 20px;
+    box-sizing: border-box;
+}
 
+main.projetos section {
+    background: rgb(15, 101, 172);
+    padding: 20px;
+    flex: 0 0 510px; /* Aumenta a largura da section */
+}
+
+main.projetos article {
+    flex: 0 0 330px; /* Diminui a largura dos articles */
+    background: #e4e4e4;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 1200px) {
+    main.projetos > * {
+        width: 300px;
+    }
+
+    main.projetos section {
+        flex: 0 0 400px;
+    }
+
+    main.projetos article {
+        flex: 0 0 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    main.projetos {
+        flex-direction: column;
+        height: auto;
+    }
+
+    main.projetos > * {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    main.projetos section {
+        flex: 1 1 100%;
+    }
+
+    main.projetos article {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header, nav, footer, aside, main section, main article {
+        padding: 0.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 0.5rem;
+    }
+
+    .social-icons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-icons a {
+        margin: 5px 0;
+    }
+}
 
